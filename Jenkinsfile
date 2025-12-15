@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone Main Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/Baansheeee/New_Repo.git'
+                git branch: 'main', url: 'https://github.com/saffanoor001/DEVOPS_ASSIGNMENT_3'
             }
         }
 
@@ -73,7 +73,7 @@ pipeline {
                 mail (
                     subject: "Tests PASSED: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
                     body: "All tests passed.\nBuild: ${env.BUILD_URL}",
-                    to: "shayanahmed675432@gmail.com,qasimalik@gmail.com"
+                    to: "saffanoor001@gmail.com,qasimalik@gmail.com"
                 )
             }
         }
@@ -83,7 +83,7 @@ pipeline {
                 mail (
                     subject: "Tests FAILED: ${env.JOB_NAME} [${env.BUILD_NUMBER}]",
                     body: "Tests failed.\nBuild: ${env.BUILD_URL}",
-                    to: "shayanahmed675432@gmail.com,qasimalik@gmail.com"
+                    to: "saffanoor001@gmail.com,qasimalik@gmail.com"
                 )
             }
         }
